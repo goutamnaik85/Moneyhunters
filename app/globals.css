@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply bg-background text-foreground antialiased; }
+  body { @apply min-h-screen bg-gradient-to-br from-[#050505] via-[#0a0a0a] to-[#111111]; }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-glass backdrop-blur-xl border border-glass-border rounded-2xl;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+  .glass-input {
+    @apply bg-glass border border-glass-border rounded-xl px-4 py-3 text-foreground placeholder-white/30 outline-none transition-all;
+    @apply focus:border-neon-cyan/50 focus:shadow-neon-cyan;
+  }
+  .neon-text-emerald { text-shadow: 0 0 10px rgba(16,185,129,0.5); }
+  .neon-text-cyan    { text-shadow: 0 0 10px rgba(6,182,212,0.5); }
+  .neon-text-violet  { text-shadow: 0 0 10px rgba(139,92,246,0.5); }
+}
